@@ -57,12 +57,12 @@ const shoppingList = (function(){
   
   function addItemToShoppingList(itemName) {
     try {
-      Item.validateName()
+      Item.validateName(itemName);
       store.items.push(Item.create(itemName));
+      render();
     } catch (error) {
-      console.log(`Cannot add item ${error.message}`)
+      console.log(`Cannot add item ${error.message}`);
     }
-    render();
   }
   
   function handleNewItemSubmit() {
