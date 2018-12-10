@@ -1,4 +1,4 @@
-/* global store, Item, $ */
+/* global store, Item, */
 'use strict';
 // eslint-disable-next-line no-unused-vars
 const shoppingList = (function(){
@@ -59,10 +59,11 @@ const shoppingList = (function(){
     try {
       Item.validateName()
       store.items.push(Item.create(itemName));
+      render();
     } catch (error) {
       console.log(`Cannot add item ${error.message}`)
     }
-    render();
+    
   }
   
   function handleNewItemSubmit() {
