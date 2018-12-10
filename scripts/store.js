@@ -55,7 +55,8 @@ const store = (function () {
         findAndToggleChecked, 
         findAndUpdateName, 
         findAndDelete,
-        toggleCheckedFilter
+        toggleCheckedFilter,
+        setSearchTerm
     };
 
 }());
